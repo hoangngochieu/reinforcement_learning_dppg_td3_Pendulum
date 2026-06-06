@@ -183,31 +183,6 @@ After training, the program displays 4 charts:
 
 ---
 
-## ❓ Troubleshooting
-
-### 1. `ModuleNotFoundError: No module named 'gymnasium'`
-```bash
-pip install gymnasium
-```
-
-### 2. `ModuleNotFoundError: No module named 'torch'`
-```bash
-pip install torch
-```
-
-### 3. Visualization error: `pygame` not displaying
-```bash
-pip install pygame
-```
-> Gymnasium uses Pygame to render environments in `render_mode="human"` mode.
-
-### 4. `FileNotFoundError` when running Visualize
-You need to train the model first (set `TRAIN_MODE = True`) to generate `.pth` files.
-
-### 5. Want faster training?
-Reduce `MAX_TIMESTEPS` in the code (e.g., from `100000` to `50000`).
-
----
 
 ## 👨‍💻 Author
 
@@ -410,32 +385,6 @@ Sau khi train xong, chương trình sẽ hiển thị 4 biểu đồ:
 1. **Clipped Double-Q**: Dùng **2 Critics**, lấy `min(Q1, Q2)` → giảm overestimation
 2. **Delayed Policy Updates**: Cập nhật Actor **mỗi 2 steps** thay vì mỗi step
 3. **Target Policy Smoothing**: Thêm noise vào target action → tránh exploit lỗi cục bộ
-
----
-
-## ❓ Xử lý lỗi thường gặp
-
-### 1. `ModuleNotFoundError: No module named 'gymnasium'`
-```bash
-pip install gymnasium
-```
-
-### 2. `ModuleNotFoundError: No module named 'torch'`
-```bash
-pip install torch
-```
-
-### 3. Lỗi khi chạy Visualize: `pygame` không hiển thị
-```bash
-pip install pygame
-```
-> Gymnasium sử dụng Pygame để render môi trường ở chế độ `render_mode="human"`.
-
-### 4. `FileNotFoundError` khi chạy Visualize
-Bạn cần train model trước (đặt `TRAIN_MODE = True`) để tạo các file `.pth`.
-
-### 5. Muốn train nhanh hơn
-Giảm số `MAX_TIMESTEPS` trong code (ví dụ: từ `100000` xuống `50000`).
 
 ---
 
